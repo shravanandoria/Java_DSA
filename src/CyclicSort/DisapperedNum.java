@@ -5,6 +5,8 @@ import java.util.List;
 
 public class DisapperedNum {
 
+//    [1,4,3,4,7]
+
     public static void main(String[] args) {
         int[] arr = {3,2,1};
         List<Integer> nums = find(arr);
