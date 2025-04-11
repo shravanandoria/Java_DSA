@@ -2,7 +2,58 @@ package Patterns;
 
 public class Pattern1 {
     public static void main(String[] args) {
-        pattern4(5);
+        pattern7(5);
+    }
+
+
+
+
+    static void pattern7(int n) {
+        for (int row = 1; row <= n * 2; row++) {
+            int c = row > n ? n * 2 - row : row;
+
+            for (int col = 0; col < n - c; col++) {
+                System.out.print("  ");
+            }
+
+            for (int col = c; col >= 1 ; col--) {
+                System.out.print(col + " ");
+            }
+
+            for (int col = 2; col <= c; col++) {
+                System.out.print(col + " ");
+            }
+
+            System.out.println();
+        }
+    }
+
+
+    static void pattern6(int n) {
+        for (int row = 1; row <= n * 2; row++) {
+            int spaces = row <= n ? n - row : n - (n * 2 - row);
+            int colsPerRow = n - spaces;
+
+            for (int col = 1; col <= spaces; col++) {
+                System.out.print("  ");
+            }
+            for (int i = spaces + 1; i <= colsPerRow; i++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
+    static void pattern5(int n) {
+        for (int row = 1; row <= n * 2 ; row++) {
+            int totalRow = n * 2;
+            int cols = row <= totalRow / 2 ? row : totalRow - row;
+
+            for (int col = 1; col <= cols; col++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
 
     static void pattern4(int n) {
