@@ -2,11 +2,20 @@ package Patterns;
 
 public class Pattern1 {
     public static void main(String[] args) {
-        pattern7(5);
+        pattern8(4);
     }
 
-
-
+    static void pattern8(int n) {
+        int originalN = n;
+        n = n * 2;
+        for (int row = 0; row <= n; row++) {
+            for (int col = 0; col <= n; col++) {
+                int atEveryIndex = originalN - Math.min(Math.min(row, col), Math.min(n - col, n - row));
+                System.out.print(atEveryIndex + " ");
+            }
+            System.out.println();
+        }
+    }
 
     static void pattern7(int n) {
         for (int row = 1; row <= n * 2; row++) {
@@ -27,7 +36,6 @@ public class Pattern1 {
             System.out.println();
         }
     }
-
 
     static void pattern6(int n) {
         for (int row = 1; row <= n * 2; row++) {
